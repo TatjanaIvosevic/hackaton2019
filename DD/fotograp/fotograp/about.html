@@ -62,10 +62,12 @@
                 <li class="has-children">
                   <a href="gallery.html">Galerija</a>
                   <ul class="dropdown">
-                    <li><a href="#">Umetničke</a></li>
-                    <li><a href="#">Modeling</a></li>
-                    <li><a href="#">Mature</a></li>
-                    <li><a href="#">Proslave</a> </li>
+                    <li><a href="artistic.html">Umetničke</a></li>
+                    <li><a href="modeling.html">Modeling</a></li>
+                    <li><a href="graduation.html">Mature</a></li>
+                    <li><a href="selebrations.html">Proslave</a> </li>
+                    <li><a href="food.html">Hrana</a> </li>
+                    <li><a href="me.html">Ja, kao model</a> </li>
                   </ul>
                 </li>
                 <li><a href="booking.html">Usluge</a></li>
@@ -161,24 +163,33 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      <form action="" method="POST">
+                      <form name="kontakt">
                         <div class="form-group">
                           <label for="name">Ime:</label>
                           <input id="name" type="text" name="name" class="form-control" placeholder="Unesite vase ime">
+                          <small id="name-mess" class="text-danger"></small>
                         </div>
                         <div class="form-group">
                           <label for="surname">Prezime:</label>
                           <input id="surname" type="text" name="surname" class="form-control" placeholder="Unesite vase prezime">
+                          <small id="surname-mess" class="text-danger"></small>
                         </div>
                         <div class="form-group">
                           <label for="email">Email:</label>
                           <input id="email" type="email" name="email" class="form-control" placeholder="Unesite vasu email adresu">
+                          <small id="email-mess" class="text-danger"></small>
                         </div>
                         <div class="form-group">
-                          <label for="subject">Poruka:</label>
-                          <textarea id="subject" name="subject" class="form-control" placeholder="Unesite vasu poruku" rows="5"></textarea>
+                          <label for="subject">Naslov:</label>
+                          <input id="subject" name="subject" class="form-control" placeholder="Unesite naslov poruke" rows="5">
+                          <small id="subject-mess" class="text-danger"></small>
                         </div>
-
+                        <div class="form-group">
+                          <label for="message">Poruka:</label>
+                          <textarea id="message" name="message" class="form-control" placeholder="Unesite vasu poruku" rows="5"></textarea>
+                          <small id="message-mess" class="text-danger"></small>
+                        </div>
+                        <div id="alert-mess" class="alert" role="alert"></div>
                         <button type="submit" class="btn btn-danger btn-block">Pošalji svoju poruku</button>
                       </form>
                     </div>
@@ -275,6 +286,7 @@
   <script src="js/bootstrap-datepicker.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/aos.js"></script>
+  <script src="js/contact.js"></script>
 
   <script src="js/picturefill.min.js"></script>
   <script src="js/lightgallery-all.min.js"></script>

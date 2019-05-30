@@ -66,10 +66,12 @@
                 <li class="has-children">
                   <a href="gallery.html">Galerija</a>
                   <ul class="dropdown">
-                    <li><a href="gallery.html">Umetničke</a></li>
+                    <li><a href="artistic.html">Umetničke</a></li>
                     <li><a href="modeling.html">Modeling</a></li>
-                    <li><a href="#">Mature</a></li>
-                    <li><a href="#">Proslave</a> </li>
+                    <li><a href="graduation.html">Mature</a></li>
+                    <li><a href="selebrations.html">Proslave</a> </li>
+                    <li><a href="food.html">Hrana</a> </li>
+                    <li><a href="me.html">Ja, kao model</a> </li>
                   </ul>
                 </li>
                 <li><a href="booking.html">Usluge</a></li>
@@ -107,7 +109,6 @@
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-7 text-center " data-aos="fade-up">
-            <!--<h1>Davor Dulić Photography</h1>-->
             <img class="img-fluid" src="images/dd_potpis.png" width="1000" height="150">
           </div>
         </div>
@@ -182,7 +183,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <a class="image-gradient" href="modeling.html">
+            <a class="image-gradient" href="selebrations.html">
               <figure>
                 <img src="images/birthday.jpg" alt="birthday" class="img-fluid">
               </figure>
@@ -193,7 +194,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <a class="image-gradient" href="gallery.html">
+            <a class="image-gradient" href="graduation.html">
               <figure>
                 <img src="images/matura1.jpg" alt="mature" class="img-fluid">
               </figure>
@@ -204,7 +205,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <a class="image-gradient" href="gallery.html">
+            <a class="image-gradient" href="food.html">
               <figure>
                 <img src="images/grofnica.jpg" alt="food" class="img-fluid">
               </figure>
@@ -215,9 +216,9 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-            <a class="image-gradient" href="gallery.html">
+            <a class="image-gradient" href="artistic.html">
               <figure>
-                <img src="images/umetnicka12.jpg" alt="artistic" class="img-fluid">
+                <img src="images/umetnicke/umetnicka12.jpg" alt="artistic" class="img-fluid">
               </figure>
               <div class="text">
                 <h3>Umetničke</h3>
@@ -226,7 +227,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-            <a class="image-gradient" href="gallery.html">
+            <a class="image-gradient" href="me.html">
               <figure>
                 <img src="images/davor_model1.jpg" alt="davor" class="img-fluid">
               </figure>
@@ -263,24 +264,33 @@
                                </button>
                            </div>
                            <div class="modal-body">
-                               <form action="" method="POST">
+                               <form name="kontakt">
                                  <div class="form-group">
                                    <label for="name">Ime:</label>
                                    <input id="name" type="text" name="name" class="form-control" placeholder="Unesite vase ime">
+                                   <small id="name-mess" class="text-danger"></small>
                                  </div>
                                  <div class="form-group">
                                    <label for="surname">Prezime:</label>
                                    <input id="surname" type="text" name="surname" class="form-control" placeholder="Unesite vase prezime">
+                                   <small id="surname-mess" class="text-danger"></small>
                                  </div>
                                  <div class="form-group">
                                    <label for="email">Email:</label>
                                    <input id="email" type="email" name="email" class="form-control" placeholder="Unesite vasu email adresu">
+                                   <small id="email-mess" class="text-danger"></small>
                                  </div>
                                  <div class="form-group">
-                                   <label for="subject">Poruka:</label>
-                                   <textarea id="subject" name="subject" class="form-control" placeholder="Unesite vasu poruku" rows="5"></textarea>
+                                   <label for="subject">Naslov:</label>
+                                   <input id="subject" name="subject" class="form-control" placeholder="Unesite naslov poruke" rows="5">
+                                   <small id="subject-mess" class="text-danger"></small>
                                  </div>
-
+                                 <div class="form-group">
+                                     <label for="message">Poruka:</label>
+                                     <textarea id="message" name="message" class="form-control" placeholder="Unesite vasu poruku" rows="5"></textarea>
+                                     <small id="message-mess" class="text-danger"></small>
+                                 </div>
+                                 <div id="alert-mess" class="alert" role="alert"></div>
                                  <button type="submit" class="btn btn-danger btn-block">Pošalji svoju poruku</button>
                                </form>
                            </div>
@@ -373,6 +383,7 @@
   <script src="js/bootstrap-datepicker.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/aos.js"></script>
+  <script src="js/contact.js"></script>
 
   <script src="js/picturefill.min.js"></script>
   <script src="js/lightgallery-all.min.js"></script>

@@ -65,10 +65,12 @@
                 <li class="has-children">
                   <a href="gallery.html">Galerija</a>
                   <ul class="dropdown">
-                    <li><a href="#">Umetničke</a></li>
+                    <li><a href="artistic.html">Umetničke</a></li>
                     <li><a href="modeling.html">Modeling</a></li>
-                    <li><a href="#">Mature</a></li>
-                    <li><a href="#">Proslave</a> </li>
+                    <li><a href="graduation.html">Mature</a></li>
+                    <li><a href="selebrations.html">Proslave</a> </li>
+                    <li><a href="food.html">Hrana</a> </li>
+                    <li><a href="me.html">Ja, kao model</a> </li>
                   </ul>
                 </li>
                 <li><a href="booking.html">Usluge</a></li>
@@ -170,55 +172,62 @@
           <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="images/umetnicke/umetnicka18.jpg" data-sub-html="<h4>Subotica</h4><p>Umetničke fotografije subotice i njenih prirodnih lepota.</p>">
               <a href="#"><img src="images/umetnicke/umetnicka18.jpg" alt="IMage" class="img-fluid" style="height: 185px; width: 185px"></a>
           </div>
-
       </div>
     </div>
   </div>
 
 
-    <div class="py-3 mb-5 mt-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 d-md-flex align-items-center" data-aos="fade">
-            <h2 class="text-black mb-5 mb-md-0 text-center text-md-left">Treba vam fotograf?</h2>
-            <div class="ml-auto text-center text-md-left">
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary btn-danger py-3 px-5 rounded" data-toggle="modal" data-target="#exampleModal">
-                Kontaktirajte me!
-              </button>
+  <div class="py-3 mb-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 d-md-flex align-items-center" data-aos="fade">
+          <h2 class="text-black mb-5 mb-md-0 text-center text-md-left">Treba vam fotograf?</h2>
+          <div class="ml-auto text-center text-md-left">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-danger py-3 px-5 rounded" data-toggle="modal" data-target="#exampleModal">
+              Kontaktirajte me!
+            </button>
 
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Kontakt forma</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <form action="" method="POST">
-                        <div class="form-group">
-                          <label for="name">Ime:</label>
-                          <input id="name" type="text" name="name" class="form-control" placeholder="Unesite vase ime">
-                        </div>
-                        <div class="form-group">
-                          <label for="surname">Prezime:</label>
-                          <input id="surname" type="text" name="surname" class="form-control" placeholder="Unesite vase prezime">
-                        </div>
-                          <div class="form-group">
-                              <label for="email">Email:</label>
-                              <input id="email" type="email" name="email" class="form-control" placeholder="Unesite vasu email adresu">
-                          </div>
-                        <div class="form-group">
-                          <label for="subject">Poruka:</label>
-                          <textarea id="subject" name="subject" class="form-control" placeholder="Unesite vasu poruku" rows="5"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-danger btn-block">Pošalji svoju poruku</button>
-                      </form>
-                    </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Kontakt forma</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form name="kontakt">
+                      <div class="form-group">
+                        <label for="name">Ime:</label>
+                        <input id="name" type="text" name="name" class="form-control" placeholder="Unesite vase ime">
+                        <small id="name-mess" class="text-danger"></small>
+                      </div>
+                      <div class="form-group">
+                        <label for="surname">Prezime:</label>
+                        <input id="surname" type="text" name="surname" class="form-control" placeholder="Unesite vase prezime">
+                        <small id="surname-mess" class="text-danger"></small>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input id="email" type="email" name="email" class="form-control" placeholder="Unesite vasu email adresu">
+                        <small id="email-mess" class="text-danger"></small>
+                      </div>
+                      <div class="form-group">
+                        <label for="subject">Naslov:</label>
+                        <input id="subject" name="subject" class="form-control" placeholder="Unesite naslov poruke" rows="5">
+                        <small id="subject-mess" class="text-danger"></small>
+                      </div>
+                      <div class="form-group">
+                        <label for="message">Poruka:</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Unesite vasu poruku" rows="5"></textarea>
+                        <small id="message-mess" class="text-danger"></small>
+                      </div>
+                      <div id="alert-mess" class="alert" role="alert"></div>
+                      <button type="submit" class="btn btn-danger btn-block">Pošalji svoju poruku</button>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -227,6 +236,7 @@
         </div>
       </div>
     </div>
+  </div>
 
 
   
@@ -311,6 +321,7 @@
   <script src="js/bootstrap-datepicker.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/aos.js"></script>
+  <script src="js/contact.js"></script>
 
   <script src="js/picturefill.min.js"></script>
   <script src="js/lightgallery-all.min.js"></script>
