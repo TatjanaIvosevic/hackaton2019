@@ -149,41 +149,41 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                            <form action="" method="POST">
+                            <form action="php/booking.php" method="POST">
                               <div class="form-group">
                                 <label for="model-price">Fotografisanje koje zakazujete iznosi:</label>
                                 <input id="model-price" type="text" name="model-price" class="form-control" value="30 €">
                               </div>
                               <div class="form-group">
                                 <label for="name">Ime:</label>
-                                <input id="name" type="text" name="name" class="form-control" placeholder="Unesite vase ime">
+                                <input id="name" type="text" name="name" class="form-control" placeholder="Unesite vase ime" required>
                               </div>
                               <div class="form-group">
                                 <label for="surname">Prezime:</label>
-                                <input id="surname" type="text" name="surname" class="form-control" placeholder="Unesite vase prezime">
+                                <input id="surname" type="text" name="surname" class="form-control" placeholder="Unesite vase prezime" required>
                               </div>
                               <div class="form-group">
                                 <label for="number">Broj telefona:</label>
-                                <input id="number" type="number" name="number" class="form-control" placeholder="Unesite vaš broj telefona">
+                                <input id="number" type="number" name="number" class="form-control" placeholder="Unesite vaš broj telefona" required>
                               </div>
                               <div class="form-group">
                                 <label for="email">Email:</label>
-                                <input id="email" type="email" name="email" class="form-control" placeholder="Unesite vasu email adresu">
+                                <input id="email" type="email" name="email" class="form-control" placeholder="Unesite vasu email adresu" required>
                               </div>
                               <div class="form-group">
                                 <label for="date">Datum:</label>
-                                <input id="date" type="date" name="date" class="form-control" placeholder="Unesite datum kada želite da se fotografišete">
+                                <input id="date" type="date" name="date" class="form-control" placeholder="Unesite datum kada želite da se fotografišete" required>
                               </div>
                               <div class="form-group">
                                 <label for="time">Vreme:</label>
-                                <input id="time" type="time" name="time" class="form-control" placeholder="Unesite vreme kada želite da se fotografišete">
+                                <input id="time" type="time" name="time" class="form-control" placeholder="Unesite vreme kada želite da se fotografišete" required>
                               </div>
                               <div class="form-group">
                                 <label for="subject">Poruka:</label>
-                                <textarea id="subject" name="subject" class="form-control" placeholder="Unesite vasu poruku" rows="5"></textarea>
+                                <textarea id="subject" name="subject" class="form-control" placeholder="Unesite vasu poruku" rows="5" required></textarea>
                               </div>
 
-                              <button type="submit" class="btn btn-primary py-2 px-4 text-white btn-block">Pošalji svoju poruku</button>
+                              <button type="submit" class="btn btn-primary py-2 px-4 text-white btn-block" onclick="serverResponse()">Pošalji svoju poruku</button>
                             </form>
                           </div>
                         </div>
@@ -205,58 +205,6 @@
                     <button type="button"  value="Book it" class="btn btn-primary py-2 px-4 text-white" data-toggle="modal" data-target="#exampleModal">
                       Zakaži fotografisanje!
                     </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Kontakt forma</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <form action="" method="POST">
-                              <div class="form-group">
-                                <label for="birthday-price">Fotografisanje koje zakazujete iznosi:</label>
-                                <input id="birthday-price" type="text" name="birthday-price" class="form-control" value="40 ">
-                              </div>
-                              <div class="form-group">
-                                <label for="name">Ime:</label>
-                                <input id="name" type="text" name="name" class="form-control" placeholder="Unesite vase ime">
-                              </div>
-                              <div class="form-group">
-                                <label for="surname">Prezime:</label>
-                                <input id="surname" type="text" name="surname" class="form-control" placeholder="Unesite vase prezime">
-                              </div>
-                              <div class="form-group">
-                                <label for="number">Broj telefona:</label>
-                                <input id="number" type="number" name="number" class="form-control" placeholder="Unesite vaš broj telefona">
-                              </div>
-                              <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input id="email" type="email" name="email" class="form-control" placeholder="Unesite vasu email adresu">
-                              </div>
-                              <div class="form-group">
-                                <label for="date">Datum:</label>
-                                <input id="date" type="date" name="date" class="form-control" placeholder="Unesite datum kada želite da se fotografišete">
-                              </div>
-                              <div class="form-group">
-                                <label for="time">Vreme:</label>
-                                <input id="time" type="time" name="time" class="form-control" placeholder="Unesite vreme kada želite da se fotografišete">
-                              </div>
-                              <div class="form-group">
-                                <label for="subject">Poruka:</label>
-                                <textarea id="subject" name="subject" class="form-control" placeholder="Unesite vasu poruku" rows="5"></textarea>
-                              </div>
-
-                              <button type="submit" class="btn btn-primary py-2 px-4 text-white btn-block">Pošalji svoju poruku</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -274,64 +222,11 @@
                       <button type="button"  value="Book it" class="btn btn-primary py-2 px-4 text-white" data-toggle="modal" data-target="#exampleModal">
                         Zakaži fotografisanje!
                       </button>
-
-                      <!-- Modal -->
-                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Kontakt forma</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <form action="" method="POST">
-                                <div class="form-group">
-                                  <label for="graduation-price">Fotografisanje koje zakazujete iznosi:</label>
-                                  <input id="graduation-price" type="text" name="graduation-price" class="form-control" value="40 €">
-                                </div>
-                                <div class="form-group">
-                                  <label for="name">Ime:</label>
-                                  <input id="name" type="text" name="name" class="form-control" placeholder="Unesite vase ime">
-                                </div>
-                                <div class="form-group">
-                                  <label for="surname">Prezime:</label>
-                                  <input id="surname" type="text" name="surname" class="form-control" placeholder="Unesite vase prezime">
-                                </div>
-                                <div class="form-group">
-                                  <label for="number">Broj telefona:</label>
-                                  <input id="number" type="number" name="number" class="form-control" placeholder="Unesite vaš broj telefona">
-                                </div>
-                                <div class="form-group">
-                                  <label for="email">Email:</label>
-                                  <input id="email" type="email" name="email" class="form-control" placeholder="Unesite vasu email adresu">
-                                </div>
-                                <div class="form-group">
-                                  <label for="date">Datum:</label>
-                                  <input id="date" type="date" name="date" class="form-control" placeholder="Unesite datum kada želite da se fotografišete">
-                                </div>
-                                <div class="form-group">
-                                  <label for="time">Vreme:</label>
-                                  <input id="time" type="time" name="time" class="form-control" placeholder="Unesite vreme kada želite da se fotografišete">
-                                </div>
-                                <div class="form-group">
-                                  <label for="subject">Poruka:</label>
-                                  <textarea id="subject" name="subject" class="form-control" placeholder="Unesite vasu poruku" rows="5"></textarea>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary py-2 px-4 text-white btn-block">Pošalji svoju poruku</button>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -415,6 +310,21 @@
     $(document).ready(function(){
       $('#lightgallery').lightGallery();
     });
+
+    function serverResponse() {
+      const xhr = new XMLHttpRequest();
+
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          const serverResponse = document.getElementById(serverResponse);
+          serverResponse.innerHTML = this.responseText("Podaci uspesno poslati!");
+        }
+      };
+
+      xhttp.open("POST", "booking.php", true);
+      xhttp.setRequestHeader("Content-type", "application/x-www-urlencoded");
+      xhttp.send();
+    }
   </script>
     
   </body>
