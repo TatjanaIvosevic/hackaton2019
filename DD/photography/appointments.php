@@ -15,6 +15,7 @@ include_once('php/session.php');
     <link rel="icon" href="../../favicon.ico">
 
     <title>Admin Panel</title>
+    <link rel="icon" type="image/png" href="images/davor_logo.png">
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
