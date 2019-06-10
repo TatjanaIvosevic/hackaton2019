@@ -135,7 +135,7 @@
                   <!--<input type="button" value="Book it" class="btn btn-primary py-2 px-4 text-white">-->
                   <div class="ml-auto text-center text-md-left">
                     <!-- Button trigger modal -->
-                    <button type="button"  value="Book it" class="btn btn-primary py-2 px-4 text-white" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" value="€30" class="btn btn-primary py-2 px-4 text-white btn-price" data-toggle="modal" data-target="#exampleModal">
                       Zakaži fotografisanje!
                     </button>
 
@@ -150,10 +150,10 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                            <form action="php/booking.php" method="POST">
+                            <form action="php/booking.php" method="POST" name="kontakt">
                               <div class="form-group">
                                 <label for="model-price">Fotografisanje koje zakazujete iznosi:</label>
-                                <input id="model-price" type="text" name="model-price" class="form-control" value="30 €">
+                                <input id="model-price" type="text" name="model-price" class="form-control">
                               </div>
                               <div class="form-group">
                                 <label for="name">Ime:</label>
@@ -184,7 +184,8 @@
                                 <textarea id="subject" name="subject" class="form-control" placeholder="Unesite vasu poruku" rows="5" required></textarea>
                               </div>
 
-                              <button type="submit" class="btn btn-primary py-2 px-4 text-white btn-block" onclick="serverResponse()">Pošalji svoju poruku</button>
+                              <button type="submit" class="btn btn-primary py-2 px-4 text-white btn-block">Pošalji svoju poruku</button>
+                              <p class="text-center text-success" id="serverResponse"></p>
                             </form>
                           </div>
                         </div>
@@ -203,7 +204,7 @@
                   <!--<input type="button" value="Book it" class="btn btn-primary py-2 px-4 text-white">-->
                   <div class="ml-auto text-center text-md-left">
                     <!-- Button trigger modal -->
-                    <button type="button"  value="Book it" class="btn btn-primary py-2 px-4 text-white" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" value="€40" class="btn btn-primary py-2 px-4 text-white btn-price" data-toggle="modal" data-target="#exampleModal">
                       Zakaži fotografisanje!
                     </button>
                   </div>
@@ -220,7 +221,7 @@
                     <!--<input type="button" value="Book it" class="btn btn-primary py-2 px-4 text-white">-->
                     <div class="ml-auto text-center text-md-left">
                       <!-- Button trigger modal -->
-                      <button type="button"  value="Book it" class="btn btn-primary py-2 px-4 text-white" data-toggle="modal" data-target="#exampleModal">
+                      <button type="button" value="€40" class="btn btn-primary py-2 px-4 text-white btn-price" data-toggle="modal" data-target="#exampleModal">
                         Zakaži fotografisanje!
                       </button>
                     </div>
@@ -312,19 +313,32 @@
       $('#lightgallery').lightGallery();
     });
 
-    function serverResponse() {
-      const xhr = new XMLHttpRequest();
+    window.form = $('form[name="kontakt"]');
+    var btn_price = $('.btn-price');
+    btn_price.click(function (e) {
+      var model_price = $('input[name="model-price"]');
+      model_price.val(e.target.value);
+    });
+
+    form.submit(function (e) {
+      e.preventDefault();
+      var data = form.serialize();
+      serverResponse(data);
+    });
+    function serverResponse(data) {
+      const xhttp = new XMLHttpRequest();
 
       xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-          const serverResponse = document.getElementById(serverResponse);
-          serverResponse.innerHTML = this.responseText("Podaci uspesno poslati!");
+          var serverResponse = document.getElementById("serverResponse");
+          serverResponse.innerHTML =  xhttp.responseText;
+          form.trigger('reset');
         }
       };
 
-      xhttp.open("POST", "booking.php", true);
-      xhttp.setRequestHeader("Content-type", "application/x-www-urlencoded");
-      xhttp.send();
+      xhttp.open("POST", "php/booking.php", true);
+      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhttp.send(data);
     }
   </script>
     

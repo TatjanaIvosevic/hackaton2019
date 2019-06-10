@@ -22,7 +22,8 @@ if(!empty($name) || !empty($surname) || !empty($number) || !empty($email) || !em
         $INSERT = "INSERT INTO booking (name, surname, phone_number, email, date, time, message) values('$name','$surname','$number','$email','$date','$time','$subject')";
         $query = mysqli_query($conn,$INSERT);
         if($query) {
-            echo "Uspesno uneto u bazu";die;
+            echo "Uspesno uneto u bazu";
+            die;
         }
         echo "Doslo je do greske...";die;
     }
