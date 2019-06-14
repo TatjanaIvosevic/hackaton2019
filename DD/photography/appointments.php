@@ -62,6 +62,7 @@ include_once('php/session.php');
                                     <th>Datum:</th>
                                     <th>Vreme:</th>
                                     <th>Poruka:</th>
+                                    <th>Delete:</th>
                                 </tr>
                                 <?php
                                 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -73,6 +74,7 @@ include_once('php/session.php');
                                     <td> " . $row['date'] . "</td>
                                     <td> " . $row['time'] . "</td>
                                     <td> " . $row['message'] . "</td>
+                                    <td> " . "<a href='php/delete.php?id={$row['id_booking']};'>Delete</a>" ."</td>
                                     </tr>";
                                 }
                                 ?>
